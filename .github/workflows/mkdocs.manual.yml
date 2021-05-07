@@ -12,6 +12,8 @@ jobs:
       - name: Checkout main
         uses: actions/checkout@v1
       - name: Build examples
+        env:
+          ISSUER_URL: https://onboarding.smarthealth.cards/spec/examples/issuer
         run: |
           cd generate-examples
           npm ci
